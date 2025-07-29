@@ -1,0 +1,64 @@
+✅ LeetCode Tracker – Commands Log
+
+🔧 Project Initialization
+-------------------------
+npx create-react-app leetcode-tracker
+cd leetcode-tracker
+
+📦 Installing Dependencies
+--------------------------
+npm install react-icons
+npm install firebase
+
+🌐 Firebase Setup
+-----------------
+# Create project at https://console.firebase.google.com
+
+# If Firebase CLI is not installed:
+npm install -g firebase-tools
+
+# Login to Firebase
+firebase login
+
+# Initialize Firebase (run inside project root)
+firebase init
+
+# Choose: Firestore, Hosting
+# Select: Use existing project
+# Select Firestore rules: test mode (for now)
+# Set Firestore location: asia-south1 (Mumbai) or based on target audience
+# Set hosting config: `build` folder
+
+🔧 Firestore Integration (for database)
+--------------------------------------
+# Inside firebase.js
+
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: "...",
+  authDomain: "...",
+  projectId: "...",
+  storageBucket: "...",
+  messagingSenderId: "...",
+  appId: "...",
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+export { db };
+
+🚀 Firebase Deploy (when ready)
+-------------------------------
+npm run build
+firebase deploy
+
+🛠 Git & GitHub
+---------------
+git init
+git add .
+git commit -m "Initial commit for LeetCode Tracker"
+git branch -M main
+git remote add origin https://github.com/yourusername/leetcode-tracker.git
+git push -u origin main
