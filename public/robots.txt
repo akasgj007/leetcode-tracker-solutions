@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://akasgj007.github.io/leetcode-tracker-solutions/sitemap.xml

@@ -100,7 +100,7 @@ const ProblemTable = ({ problems, handleEdit, handleDelete, isAdmin }) => {
               <option value="all">All</option>
               <option value="not-started">Not Started</option>
               <option value="in-progress">In Progress</option>
-              <option value="completed">Completed</option>
+              <option value="solved">Solved</option>
             </select>
           </div>
         </div>
